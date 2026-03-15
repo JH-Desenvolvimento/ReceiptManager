@@ -7,7 +7,7 @@ repos:
       - id: Format Java files with spotless
         name: Format with spotless
         always_run: false
-        entry: python ./api/hooks/spotless_format.py
+        entry: ./api/hooks/spotless_format.py
         files: ^api/
         language: unsupported
         pass_filenames: false
