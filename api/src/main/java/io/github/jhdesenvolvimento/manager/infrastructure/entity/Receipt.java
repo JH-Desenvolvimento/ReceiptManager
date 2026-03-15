@@ -12,4 +12,13 @@
 
 package io.github.jhdesenvolvimento.manager.infrastructure.entity;
 
-public class Receipt {}
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import java.util.UUID;
+
+@Entity
+public class Receipt {
+
+    @Id
+    private UUID id;
+}

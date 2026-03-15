@@ -12,4 +12,13 @@
 
 package io.github.jhdesenvolvimento.manager.infrastructure.entity;
 
-public class Profile {}
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import java.util.UUID;
+
+@Entity
+public class Profile {
+
+    @Id
+    private UUID id;
+}
