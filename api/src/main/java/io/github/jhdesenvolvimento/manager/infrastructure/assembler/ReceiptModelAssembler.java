@@ -29,6 +29,11 @@ public class ReceiptModelAssembler
     @Override
     public @NonNull EntityModel<@NonNull Receipt> toModel(@NonNull Receipt receipt) {
         return EntityModel.of(
-                receipt, linkTo(methodOn(ReceiptController.class).all()).withRel("/receipts"));
+                receipt,
+                linkTo(methodOn(ReceiptController.class).getOne(receipt.getId()))
+                        .withSelfRel(),
+                linkTo(methodOn(ReceiptController.class).all()).withRel("receipts"),
+                linkTo(methodOn(ReceiptController.class).update(receipt, receipt.getId()))
+                        .withRel("update"));
     }
 }

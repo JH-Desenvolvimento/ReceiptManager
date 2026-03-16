@@ -21,4 +21,18 @@ public class Receipt {
 
     @Id
     private UUID id;
+
+    public Receipt() {}
+
+    public Receipt(UUID id) {
+        this.id = id;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 }
